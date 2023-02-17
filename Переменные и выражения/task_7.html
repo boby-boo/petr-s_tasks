@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task_7</title>
+  </head>
+  <body>
+    <!-- Запишите в переменную случайное число (Math.random()), умножьте его на 100 и округлите. Получите второе число из окна prompt. Сравните и отобразите в модальном окне: первое число меньше второго или нет, а также оба значения. -->
+    <script>
+      let randomValue = Math.floor(Math.random() * 101);
+      let userValue = +prompt("Введите значение");
+
+      if (!isNaN(userValue)) {
+        let message = `\nРандомное значение: ${randomValue}\nВаше значение: ${userValue}`;
+
+        if (randomValue > userValue) {
+            alert("Рандомное значение больше" + message)
+        }
+        else if (randomValue < userValue) {
+            alert("Ваше значение больше" + message)
+        }
+        else {
+            alert("Значения равны" + message)
+        }
+      }
+    </script>
+  </body>
+</html>

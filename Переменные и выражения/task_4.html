@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task_4</title>
+  </head>
+  <body>
+    <!-- Напишите в переменных формулу для расчета з/п за июль с учетом, что количество рабочий часов, количество рабочих дней в неделе и рейт за час – переменные значения и читаются из prompt. -->
+
+    <script>
+      let quantityHours = +prompt("Укажите количество рабочих часов");
+      let quantityWorkDays = +prompt('Укажите количество рабочих дней');
+      let reit = +prompt('Укажите рейт за час');
+
+
+      if (checkValue()) {
+        alert(`з/п за июль: ${quantityHours * reit * quantityWorkDays}`)
+      }
+
+      
+      function checkValue() {
+          let arr = [quantityHours, quantityWorkDays, reit];
+          let check = true;
+
+          for (let value of arr) {
+            if (isNaN(value)) {
+                check = false;
+                console.log(value)
+                break;
+            }
+          }
+
+          return check;     
+      }
+    
+    </script>
+  </body>
+</html>
