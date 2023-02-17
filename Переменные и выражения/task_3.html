@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3</title>
+</head>
+<body>
+    <!-- Создайте переменные x и y для хранения числа. Значения переменные получают из prompt. Рассчитайте произведение, частное, разность и сумму этих значений. Результат последовательно отобразите в модальном окне.-->
+    <script>
+        let x = +prompt('Введите первое значение');
+        let y = +prompt('Введите второе значение');
+
+        if (isNaN(x)) {
+            alert('Первое число должно быть числовым значением')
+        }
+        if (isNaN(y)) {
+            alert('Второе число должно быть числовым значением')
+        }
+        if (x == 0 || y == 0) {
+            alert('С нулями не работаем')
+        }
+
+    </script>
+</body>
+</html>

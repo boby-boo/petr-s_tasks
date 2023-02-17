@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_2</title>
+</head>
+<body>
+    <!-- Создайте переменные firstName и lastName для хранение имени и фамилии, запишите в них значения из модального окна prompt. Выведите на экран приветствие (“What’s up John Doe”). -->
+    <script>
+        let firstName = prompt('Напиши своё имя');
+        let lastName = prompt('Напиши свою фамилию');
+
+        if (firstName.length != 0 && lastName.length != 0)  {
+            alert(`What’s up ${firstName} ${lastName}!`);
+        }
+        else {
+            alert('Поля не должны быть пустыми)')
+        }
+    </script>
+</body>
+</html>
