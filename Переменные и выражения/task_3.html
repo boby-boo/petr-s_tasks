@@ -9,22 +9,56 @@
 <body>
     <!-- Создайте переменные x и y для хранения числа. Значения переменные получают из prompt. Рассчитайте произведение, частное, разность и сумму этих значений. Результат последовательно отобразите в модальном окне.-->
     <script>
-        let x = +prompt('Введите первое значение');
-        let y = +prompt('Введите второе значение');
+        // let x = +prompt('Введите первое значение');
+        // let y = +prompt('Введите второе значение');
 
-        if (isNaN(x)) {
-            alert('Первое число должно быть числовым значением')
-        }
-        else if (isNaN(y)) {
-            alert('Второе число должно быть числовым значением')
-        }
-        else {
-            alert('Произведение: ' + x * y);
-            alert('Деление: ' + x / y);
-            alert(`Разность: ${x - y}`);
-            alert(`Сумма: ${x + y}`);
+        // if (isNaN(x)) {
+        //     alert('Первое число должно быть числовым значением')
+        // }
+        // else if (isNaN(y)) {
+        //     alert('Второе число должно быть числовым значением')
+        // }
+        // else {
+        //     alert('Произведение: ' + x * y);
+        //     alert('Деление: ' + x / y);
+        //     alert(`Разность: ${x - y}`);
+        //     alert(`Сумма: ${x + y}`);
+        // }
+
+
+        const MATH_OPERATIONS = ['Произведение', 'Деление', 'Разность', 'Сумма'];
+        const getPromptValue = message => +prompt(message);
+        const showAlertMessage = message => alert(message);
+
+        const showResult = (key, x, y) => {
+            switch (key) {
+                case MATH_OPERATIONS[0]:
+                    showAlertMessage(`${key}: ` + (x * y));
+                    break;
+                case MATH_OPERATIONS[1]:
+                    showAlertMessage(`${key}: ` + (x / y));
+                    break;
+                case MATH_OPERATIONS[2]:
+                    showAlertMessage(`${key}: ` + (x - y));
+                    break;
+                case MATH_OPERATIONS[3]:
+                    showAlertMessage(`${key}: ` + (x + y));
+                    break;
+                default:
+                    break;
+            }
         }
 
+        const x = getPromptValue('Введите первое значение');
+        const y = getPromptValue('Введите второе значение');
+
+        if (!x) {
+            showAlertMessage('Первое число должно быть числовым значением');
+        } else if (!y) {
+            showAlertMessage('Второе число должно быть числовым значением');
+        } else {
+            MATH_OPERATIONS.map(operation => showResult(operation, x, y));
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task_1</title>
+  </head>
+  <body>
+    <!-- В переменную x записывается число, введенное пользователем в диалоговое окно. Проверить и вывести на экран, x – отрицательное число, положительное или ноль. -->
+
+    <script>
+      let x = checkValue(prompt("Введите число"));
+   
+
+      
+      function checkValue(value) {
+        let messege = 'Не корректное значение';
+
+        if (value.length != 0 && value != 'null') {
+            Number(value);
+
+            if (!isNaN(value)) {
+                if (value > 0) {
+                    messege = 'Число положительное';
+                }
+                else if (value < 0) {
+                    messege = 'Число отрицательное';
+                }
+                else {
+                    messege = 'Число равняется нолю';
+                }
+            }
+        } else {
+            messege = 'Вы ничего не ввели';
+        }
+            alert(messege);
+        }
+
+    </script>
+  </body>
+</html>

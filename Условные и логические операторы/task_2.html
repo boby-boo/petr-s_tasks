@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task_2</title>
+  </head>
+  <body>
+    <!-- Создайте три переменные с любыми числовыми значениями. Используя условный оператор и не используя логические, найдите минимальное число и отобразите на экране имя переменной и ее значение. -->
+
+    <script>
+      let firstNumber = 10;
+      let secondNumber = 12;
+      let thirdNumber = 23;
+      
+      showMaxValue(firstNumber, secondNumber, thirdNumber);
+
+      showMaxValue(12, 33, 84, 12, 94, 132, 1);
+
+      function showMaxValue(...args) {
+        let min = Number.MAX_VALUE;
+
+        for (let v of args) {
+          if (v < min) min = v;
+        }
+
+        console.log(min);
+      }
+    
+    </script>
+  </body>
+</html>
